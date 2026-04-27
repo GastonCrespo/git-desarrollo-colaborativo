@@ -9,7 +9,8 @@ git init
 ## Configurar por primera vez y única a GIT
 
 ```sh
-git config --global user.name "Gaston config --global user.email "cualquiercorreo@gmail.com"
+git config --global user.name "Gaston"
+git config --global user.email "cualquiercorreo@gmail.com"
 
 ```
 
