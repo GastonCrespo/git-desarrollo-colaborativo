@@ -118,3 +118,7 @@ git commit --amend -m "Iniciando clase 02 y sumando apuntes de repaso"
 
  ## .gitignore 
 Me permite indicar los archivos o carpetas que quiero modificar que no formen parte del repositorio. por ejemplo archivos de log durante desarollo, archivos temporales, variables de entorno  etc.
+
+## .gitkeep
+Ayuda versionar carpetas que quiero que sean partes del repositorio pero estan vacías.
+**se crea el archivo .gitkeep dentro de la carpeta que quiero que versione**
