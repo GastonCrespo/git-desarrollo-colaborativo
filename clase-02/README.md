@@ -56,3 +56,61 @@ Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
+
+
+# ¿Qué pasa si modifico un archivo DESPUÉS de hacer un commit?
+# Si todavía no hice "git push", tengo dos opciones para guardar estos nuevos cambios:
+
+# ---------------------------------------------------------
+# OPCIÓN 1: Hacer un nuevo commit (El camino tradicional)
+# ---------------------------------------------------------
+
+# 1. VOLVEMOS A PREPARAR EL ARCHIVO (STAGING)
+# Git detecta que el archivo fue modificado. Usamos "add" para prepararlo de nuevo.
+git add clase-02/README.md
+
+# 2. CHEQUEAMOS EL ESTADO
+# Git nos muestra en verde que el archivo fue modificado (modified) y está listo para guardarse.
+git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   clase-02/README.md
+
+# 3. HACEMOS EL NUEVO COMMIT
+# Creamos una nueva "foto" con un mensaje que describa esta última modificación.
+git commit -m "Agrego comentarios explicativos al repaso"
+[main abc1234] Agrego comentarios explicativos al repaso
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+
+
+# ---------------------------------------------------------
+# OPCIÓN 2: Modificar el commit anterior (El "truquito" Pro)
+# ---------------------------------------------------------
+# Ideal para no llenar el historial de commits chiquitos por olvidos. 
+# IMPORTANTE: Solo se recomienda si todavía NO hicimos "git push".
+
+# 1. PREPARAMOS EL ARCHIVO MODIFICADO (Igual que siempre)
+git add clase-02/README.md
+
+# 2. CHEQUEAMOS EL ESTADO
+git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   clase-02/README.md
+
+# 3. SOBREESCRIBIMOS EL ÚLTIMO COMMIT CON --amend
+# Fusionamos estos nuevos cambios adentro del commit anterior. 
+# Podemos cambiarle el mensaje para que abarque todo lo que hicimos.
+git commit --amend -m "Iniciando clase 02 y sumando apuntes de repaso"
+[main def5678] Iniciando clase 02 y sumando apuntes de repaso
+ Date: Wed Apr 29 11:32:00 2026 -0300
+ 1 file changed, 20 insertions(+)
+ create mode 100644 clase-02/README.md
