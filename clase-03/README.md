@@ -6,3 +6,11 @@
 git branch -d <nombre de la rama> # Si la rama ya esta en alguna otra rama fusionada
 git branch -D # Fuerzo el borrado a pesar de que el contenido de esta rama no este en otro lado
 ```
+
+## Clonado de un repositorio
+Si quiero que la carpeta .git exista en mi local, necesito clonar el repositorio.
+
+```sh
+git clone https:// etc .git
+```
+
