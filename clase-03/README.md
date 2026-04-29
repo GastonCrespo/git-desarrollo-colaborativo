@@ -13,4 +13,9 @@ Si quiero que la carpeta .git exista en mi local, necesito clonar el repositorio
 ```sh
 git clone https:// etc .git
 ```
+# arreglar un mensaje de commit o agregar en un commit un archivo que me olvide
+``` sh
+git commit -amend -m "Mensaje ( se borra la DIR del commit y se reemplaza por una nueva)"
+```
+
 
