@@ -114,3 +114,7 @@ git commit --amend -m "Iniciando clase 02 y sumando apuntes de repaso"
  Date: Wed Apr 29 11:32:00 2026 -0300
  1 file changed, 20 insertions(+)
  create mode 100644 clase-02/README.md
+
+
+ ## .gitignore 
+Me permite indicar los archivos o carpetas que quiero modificar que no formen parte del repositorio. por ejemplo archivos de log durante desarollo, archivos temporales, variables de entorno  etc.
