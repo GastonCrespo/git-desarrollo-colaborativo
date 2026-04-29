@@ -143,3 +143,48 @@ git branch -r
 ```sh
 git branch -a
 ```
+
+## Otra manera de hacer un commit a partir del 3er renglon se agrega descripcion
+1. Muevo los archivos al staging area
+```sh
+git add <nomre/archivo>
+```
+```sh
+git commit # eso abre el nano/vim/vsc para que escribamos el mensaje
+```
+
+
+## 3. Trabajo con Ramas (Branches) y Fusiones (Merges)
+
+### Creando una rama (Bifurcación)
+Tenemos dos alternativas:
+
+# Primera alternativa (Paso a paso):
+git branch feature/ramas # 1. Crea la rama
+git switch feature/ramas # 2. Te mueve a la rama
+
+# Segunda alternativa (Todo en un solo comando):
+git switch -c feature/ramas # Crea la rama y te mueve a ella automáticamente
+
+### Cómo saber la diferencia entre 2 ramas
+# Ejemplo: Si estás en 'main' y querés ver la diferencia con 'feature/ramas'
+git diff feature/ramas
+
+### Fusionar (Merge)
+> **⚠️ IMPORTANTE:** Siempre que quieras traerte los cambios de una rama a otra, **tenés que estar ubicado en la rama donde querés que queden los cambios**. O sea, si querés traerte lo que está en `feature/ramas` a la rama `main`, tenés que estar ubicado en `main`.
+
+# Paso a paso para el merge:
+git switch main           # 1. Me posiciono en la rama receptora (main)
+git merge feature/ramas   # 2. Traigo y fusiono los cambios de la otra rama
+
+### Resultados posibles al hacer un Merge:
+* **Fast-forward:** El mejor de los mundos. La fusión fue hecha automáticamente por Git de forma lineal. Sin conflictos.
+* **Tercera Vía (Merge commit):** Buen mundo. La fusión la hace también Git automáticamente uniendo dos historiales distintos. Sin conflictos.
+* **Conflicto:** Sucede cuando en las diferentes ramas hay cambios en las mismas líneas de los mismos archivos. Requiere que un humano decida qué código se queda.
+
+---
+
+## 4. Herramientas visuales para trabajar con GIT
+Si preferís usar una interfaz gráfica en lugar de la consola:
+* **GitHub Desktop:** [https://desktop.github.com/download/](https://desktop.github.com/download/)
+* **GitKraken:** [https://www.gitkraken.com/](https://www.gitkraken.com/)
