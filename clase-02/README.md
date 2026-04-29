@@ -122,3 +122,24 @@ Me permite indicar los archivos o carpetas que quiero modificar que no formen pa
 ## .gitkeep
 Ayuda versionar carpetas que quiero que sean partes del repositorio pero estan vacías.
 **se crea el archivo .gitkeep dentro de la carpeta que quiero que versione**
+
+## RAMAS (Branches)
+
+Las ramas me permiten trabajr en diferentes partes del proyecto de manera auxiliar sin afeactar la funcionalidad (codigo fuente que ya funciona)
+
+### Listar ramas
+
+```sh
+git branch
+```
+
+### Listar ramas remotas
+
+```sh
+git branch -r
+```
+### Listar ramas localres y remotas
+
+```sh
+git branch -a
+```
